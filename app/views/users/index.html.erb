@@ -96,7 +96,11 @@
     <% end %>
   </h1>
   <div class="navbar">
-  <%=form_tag({controller: "users", action: "search(#{current_organization.members})"},remote: true, class: "navbar-form navbar-left") %>
+
+    <%=form_tag search_users_path %>
+      <input class="form-control" type="text" name="query">
+    <%=end%>
+
     <form class="navbar-form navbar-left">
       <input class="form-control"
              ng-model="filterTerm"
