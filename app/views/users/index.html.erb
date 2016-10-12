@@ -97,8 +97,8 @@
   </h1>
   <div class="navbar">
 
-    <%=form_tag('users/search', class: 'navbar-form navbar-left', placeholder: "#{t('global.search')}" , remote: true,) do %>
-      <input class="form-control" type="text" name="query">
+    <%=form_tag('users/search', class: 'navbar-form navbar-left' remote: true,) do %>
+      <input class="form-control" type="text" name="query" placeholder="<%= t("global.search") %>">
     <% end %>
 
     <ul class="nav navbar-nav pull-right">
