@@ -73,6 +73,10 @@ class UsersController < ApplicationController
     @sources = find_transfer_sources_for_admin
   end
 
+  def search(organization_members)
+
+  end
+
   private
 
   def user_params
@@ -122,9 +126,5 @@ class UsersController < ApplicationController
                                  uid: id,
                                  name: @user.username)
     end
-  end
-
-  def search(organization_members)
-
   end
 end
