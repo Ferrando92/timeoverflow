@@ -123,4 +123,8 @@ class UsersController < ApplicationController
                                  name: @user.username)
     end
   end
+
+  def search(organization_members)
+
+  end
 end
