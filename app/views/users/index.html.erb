@@ -157,7 +157,7 @@
         <% end %>
       </tr>
     </thead>
-    <tbody>
+    <tbody id="user_rows">
       <%= render "user_rows", members: current_organization.members %>
     </tbody>
   </table>
@@ -189,4 +189,7 @@
     $rootScope.users = <%= users_as_json %>;
   });
 
+</script>
+<script type="text/javascript">
+  $("#items_grid").html("<%= escape_javascript(render partial: 'items_list', locals: { items: @selected } ) %>");
 </script>
