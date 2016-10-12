@@ -97,16 +97,10 @@
   </h1>
   <div class="navbar">
 
-    <%=form_tag('users/search', class: 'navbar-form navbar-left', remote: true,) do %>
+    <%=form_tag('users/search', class: 'navbar-form navbar-left',placeholder: "<%= t("global.search") %>", remote: true,) do %>
       <input class="form-control" type="text" name="query">
     <% end %>
 
-    <form class="navbar-form navbar-left">
-      <input class="form-control"
-             ng-model="filterTerm"
-             placeholder="<%= t("global.search") %>"
-             type="text">
-    </form>
     <ul class="nav navbar-nav pull-right">
       <% if admin? %>
         <li>
