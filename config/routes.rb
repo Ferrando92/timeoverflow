@@ -29,7 +29,7 @@ Rails.application.routes.draw do
 
   resources :users, concerns: :accountable, except: :destroy, :path => "members"
 
-  post 'users/search' =>'users#search', as: 'search_users_path'
+  post 'users/search', as: 'search_users_path'
 
   resources :transfers, only: [:create] do
     member do
