@@ -191,5 +191,5 @@
 
 </script>
 <script type="text/javascript">
-  $("#items_grid").html("<%= escape_javascript(render partial: 'items_list', locals: { items: @selected } ) %>");
+  $("#user_rows").html("<%= escape_javascript(render partial: 'user_rows', locals: { members: @users_search_result } ) %>");
 </script>
