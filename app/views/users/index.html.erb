@@ -191,5 +191,5 @@
 
 </script>
 <script type="text/javascript">
-  $("#user_rows").html("<%= escape_javascript(render partial: 'user_rows', locals: { members: @users_search_result } ) %>");
+  $("#user_rows").html("<%= escape_javascript(render partial: 'user_rows', locals: { members: @current_organization.members } ) %>");
 </script>
