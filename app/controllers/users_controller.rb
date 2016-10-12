@@ -73,10 +73,12 @@ class UsersController < ApplicationController
     @sources = find_transfer_sources_for_admin
   end
 
+  # ADDED BY SERGIO
   def search
     query = "%{params[:query]}%"
     @users_search_result = User.where("username LIKE ?",query)
   end
+  #LAST THING HERE I ADDED
 
   private
 

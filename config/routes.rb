@@ -29,8 +29,11 @@ Rails.application.routes.draw do
 
   resources :users, concerns: :accountable, except: :destroy, :path => "members"
 
+  # SERGIO WAS HERE
   post 'users/search'
   get 'users/search'
+  # LAST THING I ADDED
+
   resources :transfers, only: [:create] do
     member do
       put :delete_reason
