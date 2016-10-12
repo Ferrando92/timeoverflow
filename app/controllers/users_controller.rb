@@ -73,8 +73,9 @@ class UsersController < ApplicationController
     @sources = find_transfer_sources_for_admin
   end
 
-  def search(organization_members)
-
+  def search
+    query = "%{params[:query]}%"
+    @users_search_result = Users.where("username LIKE ?",query)
   end
 
   private
