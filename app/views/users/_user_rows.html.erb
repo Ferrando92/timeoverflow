@@ -1,4 +1,4 @@
-<% members.each do |member| %>
+<% members.sort!{ |a,b| a.username.downcase <=> b.username.downcase }.reverse.each do |member| %>
   <%- user = member.user %>
   <tr>
     <td>
@@ -8,14 +8,14 @@
     <td>
       <% unless(user.active?(current_organization)) %>
         <span class="glyphicon glyphicon-time"></span>
-      <% end %> 
+      <% end %>
       <a href="<%= user_path(user) %>"><%= user.username %></a>
     </td>
     <td>
       <% if(user.unconfirmed_email) %>
         <a href="mailto:<%=user.unconfirmed_email%>">
           <%= user.unconfirmed_email %>
-        </a>      
+        </a>
       <% else %>
         <a href="mailto:<%=user.email%>">
           <%= user.email %>
