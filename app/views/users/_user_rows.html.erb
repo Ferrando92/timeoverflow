@@ -1,4 +1,4 @@
-<% members.sort!{ |a,b| a.username.downcase <=> b.username.downcase }.reverse.each do |member| %>
+<% members.to_a.sort!{ |a,b| a.username.downcase <=> b.username.downcase }.reverse.each do |member| %>
   <%- user = member.user %>
   <tr>
     <td>
