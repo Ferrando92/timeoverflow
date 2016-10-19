@@ -152,7 +152,7 @@
       </tr>
     </thead>
     <tbody id="user_rows">
-      <%= render "user_rows", members: @organization_members.sort_by {|member| member.user.username} %>
+      <%= render "user_rows", members: @organization_members %>
     </tbody>
   </table>
 </div>
