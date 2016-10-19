@@ -13,7 +13,8 @@ class UsersController < ApplicationController
                      ob[mem.user_id] = mem
                    end
     @organization_members = current_organization.members
-    @organization_members.sort_by username
+    @organization_members.sort_by{|user| user.username}
+
   end
 
   def show
