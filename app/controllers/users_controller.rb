@@ -13,7 +13,7 @@ class UsersController < ApplicationController
                      ob[mem.user_id] = mem
                    end
     @organization_members = current_organization.members.sort_by{|member| member.user.username}
-    puts @organization.inspect
+    puts @organization_members.inspect
 
   end
 
