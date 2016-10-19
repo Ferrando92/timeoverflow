@@ -13,10 +13,10 @@ class UsersController < ApplicationController
                      ob[mem.user_id] = mem
                    end
     @organization_members = current_organization.members.sort_by{|member| member.user.username}
-    500.times do
+    50.times do
       puts'#'
     end
-    puts @organization_members.inspect
+    puts current_organization.members.sort_by{|member| member.user.username}.inspect
 
   end
 
