@@ -1,4 +1,4 @@
-<% members.each do |member| %>
+<% members.sort_by{|member| member.user.username}.each do |member| %>
   <%- user = member.user %>
   <tr>
     <td>
