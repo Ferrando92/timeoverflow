@@ -1,9 +1,3 @@
-    <% 50.times do %>
-      <% puts'#' %>
-    <% end %>
-    <% @organization_members.each do |member| %>
-      <% puts member.user.inspect %>
-    <% end %>
 <div ng-controller="UserListCtrl">
   <h1>
     <%= User.model_name.human.pluralize %>
