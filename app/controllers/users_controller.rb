@@ -8,10 +8,10 @@ class UsersController < ApplicationController
   def index
     @users = scoped_users
     #@memberships = current_organization.members.
-                   where(user_id: @users.map(&:id)).
-                   includes(:account).each_with_object({}) do |mem, ob|
-                     ob[mem.user_id] = mem
-                   end
+                   #where(user_id: @users.map(&:id)).
+                   #includes(:account).each_with_object({}) do |mem, ob|
+                   # ob[mem.user_id] = mem
+                   #end
     #@memberships.sort_by {|member| member.user.username}
   end
 
