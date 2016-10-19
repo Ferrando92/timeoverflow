@@ -12,6 +12,7 @@ class UsersController < ApplicationController
                    includes(:account).each_with_object({}) do |mem, ob|
                      ob[mem.user_id] = mem
                    end
+    @memberships.sort_by {|member| member.user.username}
   end
 
   def show
