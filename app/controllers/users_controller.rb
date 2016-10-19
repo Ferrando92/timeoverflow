@@ -12,11 +12,7 @@ class UsersController < ApplicationController
                    includes(:account).each_with_object({}) do |mem, ob|
                      ob[mem.user_id] = mem
                    end
-    @organization_members = current_organization.members
-    50.times do
-      puts'#'
-    end
-    puts @organization_members.inspect
+    @organization_members = current_organization.members.sort_by{|member| member.user.username}
 
   end
 
