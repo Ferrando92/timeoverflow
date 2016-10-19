@@ -16,7 +16,9 @@ class UsersController < ApplicationController
     50.times do
       puts'#'
     end
-    @organization_members.each{|member| puts.member.user.inject}
+    @organization_members.each do |member|
+      puts member.user.inspect
+    end
   end
 
   def show
