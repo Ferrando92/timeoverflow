@@ -12,7 +12,8 @@ class UsersController < ApplicationController
                    includes(:account).each_with_object({}) do |mem, ob|
                      ob[mem.user_id] = mem
                    end
-    @organization_members = current_organization.members.sort_by{|member| member.user.username}
+    @organization_members = current_organization.members.sort_by{|member| member.user:username}
+     if params[:order]
 
   end
 
@@ -117,6 +118,7 @@ class UsersController < ApplicationController
       scoped_users.find(params[:id])
     end
   end
+
 
   def redirect_to_after_create
     id = @user.member(current_organization).member_uid
